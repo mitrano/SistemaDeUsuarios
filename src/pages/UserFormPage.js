@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Button from '../components/Button';
-import HomeButton from '../components/HomeButton';
+import NavigationButton from '../components/NavigationButton';
 
 
 const UserFormPage = () => {
@@ -19,8 +19,7 @@ const UserFormPage = () => {
   };
 
   return (
-    <div>
-      <Navbar />      
+    <div>      
       <h1>Criar Usuário</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -53,7 +52,7 @@ const UserFormPage = () => {
         <Button label="Adicionar Usuário" type="submit" />
       </form>
       <div className="align-right">
-        <HomeButton />
+        <NavigationButton />
       </div>
     </div>
   );

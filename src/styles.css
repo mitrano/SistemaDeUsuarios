@@ -182,3 +182,77 @@
 .retry-button:hover {
   background-color: #bd2130;
 }
+
+/* Estilos para a lista de usuários */
+.user-list {
+  list-style-type: none; /* Remove marcadores */
+  padding: 0; /* Remove padding padrão */
+  margin: 0; /* Remove margens padrão */
+  max-width: 1000px; /* Limita a largura da lista */
+  margin: 20px auto; /* Centraliza a lista */
+  border: 1px solid #ddd; /* Adiciona uma borda ao redor */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que os itens fiquem dentro do contêiner */
+  background-color: #ffffff; /* Fundo branco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Estilos para cada item da lista */
+.user-list li {
+  padding: 15px 20px; /* Espaçamento interno */
+  border-bottom: 1px solid #eee; /* Linha separadora entre itens */
+  display: flex; /* Flexbox para alinhamento */
+  justify-content: space-between; /* Espaçamento entre nome e botão */
+  align-items: center; /* Centraliza verticalmente */
+  transition: background-color 0.2s; /* Transição suave no hover */
+}
+
+/* Último item sem borda inferior */
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+/* Hover para itens */
+.user-list li:hover {
+  background-color: #f7f7f7; /* Fundo claro ao passar o mouse */
+}
+
+/* Nome do usuário */
+.user-list .user-name {
+  font-size: 16px; /* Tamanho da fonte maior */
+  font-weight: bold; /* Destaca o nome */
+  color: #333; /* Cor escura para contraste */
+  margin-bottom: 2px; /* Espaçamento pequeno abaixo do nome */
+  margin: 0;
+}
+
+/* Email */
+.user-list .user-email {
+  font-size: 14px; /* Tamanho menor para detalhes */
+  color: #666; /* Texto mais claro */
+  font-style: italic;
+  margin-top: -25px; /* Espaçamento interno */  
+}
+
+.user-description {
+  font-size: 14px; /* Tamanho menor para descrição */
+  color: #888; /* Texto em tom mais claro */
+  margin-top: -5px; /* Espaçamento superior para separação */  
+}
+
+/* Botão dentro da lista */
+.user-list .action-button {
+  padding: 8px 12px; /* Espaçamento interno */
+  background-color: #007bff; /* Azul para destaque */
+  color: white; /* Texto branco */
+  border: none; /* Remove borda padrão */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o ponteiro de clique */
+  font-size: 14px; /* Fonte ajustada */
+  transition: background-color 0.2s; /* Transição suave */
+}
+
+.user-list .action-button:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+

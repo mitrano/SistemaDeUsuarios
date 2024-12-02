@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import UserCard from '../components/UserCard';
 import usersData from '../data/users.json';
-import HomeButton from '../components/HomeButton';
+import NavigationButton from '../components/NavigationButton';
 import CircularProgress from '@mui/material/CircularProgress'; // Importando o componente de carregamento
 
 const UserListPage = () => {
@@ -33,9 +33,8 @@ const UserListPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="align-right">
-        <HomeButton />
+        <NavigationButton />
       </div>
       <h1>Listagem de Usuários</h1>
       {isLoading ? (
@@ -56,15 +55,22 @@ const UserListPage = () => {
       </div>
 
       ) : (
-        <div className="user-list">
-          {users.map((user) => (
-            <UserCard key={user.id} user={user} />
-          ))}
-          
-          <div className="align-right">
-            <HomeButton />
-          </div>
+      <ul className="user-list">
+        {users.map((user) => (
+          <li key={user.id}>
+            <div>
+              <div className="user-name">{user.name}</div>
+              <div className="user-email">{user.email}</div>
+              <div className="user-description">{user.description}</div>
+            </div>
+            <button className="action-button">Editar</button>
+          </li>
+        ))}
+
+        <div className="align-right">
+          <NavigationButton />
         </div>
+      </ul>
       )}
     </div>
   );
