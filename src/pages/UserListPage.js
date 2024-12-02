@@ -39,28 +39,22 @@ const UserListPage = () => {
       </div>
       <h1>Listagem de Usuários</h1>
       {isLoading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+        <div className="loading-container">
           <CircularProgress /> {/* Indicador gráfico de carregamento */}
         </div>
+
       ) : error ? (
-        <div style={{ textAlign: 'center', color: 'red', marginTop: '20px' }}>
-          <p>{error}</p>
-          <button
-            onClick={() => window.location.reload()}
-            style={{
-              backgroundColor: '#dc3545',
-              color: 'white',
-              border: 'none',
-              padding: '10px 15px',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              fontSize: '16px',
-              marginTop: '10px',
-            }}
-          >
-            Tentar Novamente
-          </button>
-        </div>
+        
+      <div className="error-message">
+        <p>{error}</p>
+        <button
+          onClick={() => window.location.reload()}
+          className="retry-button"
+        >
+          Tentar Novamente
+        </button>
+      </div>
+
       ) : (
         <div className="user-list">
           {users.map((user) => (
