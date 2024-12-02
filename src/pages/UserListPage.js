@@ -8,16 +8,23 @@ import CircularProgress from '@mui/material/CircularProgress'; // Importando o c
 const UserListPage = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Estado de carregamento
+  const [error, setError] = useState(null); // Estado para erros
 
   useEffect(() => {
     // Simula o carregamento de dados com atraso
     const loadUsers = async () => {
       setTimeout(() => {
-        const sortedUsers = [...usersData].sort((a, b) =>
-          a.name.localeCompare(b.name)
-        );
-        setUsers(sortedUsers);
-        setIsLoading(false); // Finaliza o carregamento
+        try {
+          if (Math.random() > 0.7) throw new Error('Falha ao carregar os usuários');
+          const sortedUsers = [...usersData].sort((a, b) =>
+            a.name.localeCompare(b.name)
+          );
+          setUsers(sortedUsers);
+          setIsLoading(false); // Finaliza o carregamento
+        } catch (err) {
+          setError(err.message); // Atualiza o estado do erro
+          setIsLoading(false);
+        }
       }, 2000); // Simula atraso de 2 segundos
     };
 
@@ -35,6 +42,25 @@ const UserListPage = () => {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
           <CircularProgress /> {/* Indicador gráfico de carregamento */}
         </div>
+      ) : error ? (
+        <div style={{ textAlign: 'center', color: 'red', marginTop: '20px' }}>
+          <p>{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            style={{
+              backgroundColor: '#dc3545',
+              color: 'white',
+              border: 'none',
+              padding: '10px 15px',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              fontSize: '16px',
+              marginTop: '10px',
+            }}
+          >
+            Tentar Novamente
+          </button>
+        </div>
       ) : (
         <div className="user-list">
           {users.map((user) => (
@@ -44,9 +70,7 @@ const UserListPage = () => {
           <div className="align-right">
             <HomeButton />
           </div>
-
         </div>
-        
       )}
     </div>
   );
