@@ -21,25 +21,37 @@
   
   /* Navbar */
   nav {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Fundo escuro */
+    color: white; /* Texto branco */
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; 
+    align-items: center; 
   }
   
   nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 5px 0; /* Espaço entre os links */
+    padding: 5px 15px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex;
   }
-  
+   
+  nav a svg {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+  }
+
   nav a:hover {
-    text-decoration: underline;
+    background-color: #555; /* Fundo cinza no hover */
   }
   
+  nav a.active-link {
+    background-color: #555; /* Destaque para o link ativo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    border-left: 5px solid #00bfff; /* Adiciona uma barra azul na esquerda */
+  }
+
   /* Cabeçalhos */
   h1, h2 {
     margin-bottom: 20px;
@@ -86,6 +98,17 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    resize: vertical; 
+}
+
   
   /* Cartões de usuário */
   .card {

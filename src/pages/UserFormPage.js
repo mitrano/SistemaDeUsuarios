@@ -44,7 +44,7 @@ const UserFormPage = () => {
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            rows="4"
+            rows="8"
             required
           />
         </div>        

@@ -4,7 +4,7 @@ import UserCard from '../components/UserCard';
 import usersData from '../data/users.json';
 
 const UserListPage = () => {
-  const [users, setUsers] = useState([]);
+const [users, setUsers] = useState([]);
 
   useEffect(() => {
     // Ordena os usuários por nome em ordem alfabética
