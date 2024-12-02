@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Button from '../components/Button';
+import HomeButton from '../components/HomeButton';
+
 
 const UserFormPage = () => {
   const [name, setName] = useState('');
@@ -18,7 +20,7 @@ const UserFormPage = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar />      
       <h1>Criar Usuário</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -50,6 +52,9 @@ const UserFormPage = () => {
         </div>        
         <Button label="Adicionar Usuário" type="submit" />
       </form>
+      <div className="align-right">
+        <HomeButton />
+      </div>
     </div>
   );
 };
