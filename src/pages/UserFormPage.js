@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 import NavigationButton from '../components/NavigationButton';
 

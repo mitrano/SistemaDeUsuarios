@@ -118,7 +118,27 @@
         "name": "Isabela Costa",
         "email": "isabela.costa@puc-rio.br",
         "description": "Professora da PUC-Rio e especialista em educação em tecnologia. Desenvolve métodos inovadores para ensino de engenharia de software, com foco em Scrum, Kanban e aprendizado baseado em projetos."
-    }     
+    },
+    {
+      "id": 21,
+      "name": "Marcos Kalinowski",
+      "email": "marcos.kalinowski@puc-rio.br",
+      "description": "Professor da PUC-Rio, especializado em engenharia de software e métodos ágeis. Conhecido por sua liderança em pesquisas aplicadas em qualidade de software e processos de melhoria contínua."
+    },
+    {
+        "id": 22,
+        "name": "Jacques Chueke",
+        "email": "jacques.chueke@puc-rio.br",
+        "description": "Professor da PUC-Rio, especialista em engenharia de software. Conhecido por seu compromisso com a excelência educacional e sua dedicação ao avanço do conhecimento tecnológico."
+    },
+    {
+      "id": 23,
+      "name": "Markus Endler",
+      "email": "markus.endler@puc-rio.br",
+      "description": "Professor da PUC-Rio, especializado em sistemas distribuídos e computação móvel. Conhecido por sua pesquisa inovadora e contribuições significativas na área de redes e sistemas de informação."
+  }
+  
+
 
   ]
   
