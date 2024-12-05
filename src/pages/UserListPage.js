@@ -4,6 +4,7 @@ import UserCard from '../components/UserCard';
 import usersData from '../data/users.json';
 import NavigationButton from '../components/NavigationButton';
 import CircularProgress from '@mui/material/CircularProgress'; // Importando o componente de carregamento
+import Button from '../components/Button';
 
 const UserListPage = () => {
   const [users, setUsers] = useState([]);
@@ -62,8 +63,8 @@ const UserListPage = () => {
               <div className="user-name">{user.name}</div>
               <div className="user-email">{user.email}</div>
               <div className="user-description">{user.description}</div>
-            </div>
-            <button className="action-button">Editar</button>
+            </div>            
+            <Button label="Editar" type="submit" />
           </li>
         ))}
 
