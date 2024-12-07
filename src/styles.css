@@ -1,258 +1,307 @@
 /* Reset básico para garantir consistência entre navegadores */
+/* Remove as margens e o padding padrão de todos os elementos e define o modelo de caixa como border-box */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;    
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilo para o container principal */
-  div {
-    padding: 10px;
-  }
-  
-  /* Navbar */
-  nav {
-    background-color: #333; /* Fundo escuro */
-    color: white; /* Texto branco */
-    padding: 10px;
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-  }
-  
-  nav a {
-    color: white; /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado */
-    margin: 5px 0; /* Espaço entre os links */
-    padding: 5px 15px; /* Padding interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    display: flex;
-  }
-   
-  nav a svg {
-    margin-right: 5px; /* Espaço entre o ícone e o texto */
-  }
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho total do elemento */
+}
 
-  nav a:hover {
-    background-color: #555; /* Fundo cinza no hover */
-  }
-  
-  nav a.active-link {
-    background-color: #555; /* Destaque para o link ativo */
-    font-weight: bold; /* Deixa o texto em negrito */
-    border-left: 5px solid #00bfff; /* Adiciona uma barra azul na esquerda */
-  }
+/* Estilo global para o corpo da página */
+/* Define a aparência geral do corpo da página, incluindo fonte, cores e espaçamento */
+body {
+  font-family: 'Arial', sans-serif; /* Define a fonte padrão como Arial, com fallback sans-serif */
+  background-color: #f5f5f5; /* Define uma cor de fundo clara */
+  color: #333; /* Define a cor padrão do texto como cinza escuro */
+  line-height: 1.6; /* Melhora o espaçamento entre linhas para maior legibilidade */
+  margin: 0; /* Remove margens ao redor do corpo */
+  padding: 0; /* Remove padding ao redor do corpo */
+}
 
-  /* Cabeçalhos */
-  h1, h2 {
-    margin-bottom: 20px;
-  }
-  
-  /* Botões */
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-
-  .home-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px;
-  }
-  
-  .home-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .align-right {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  
-  /* Formulários */
-  form {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  
-  form div {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box;
-    resize: vertical; 
+/* Estilo para o container principal */
+/* Adiciona espaçamento interno a todos os elementos <div> */
+div {
+  padding: 10px; /* Adiciona um padding de 10px a todos os lados */
 }
 
   
-  /* Cartões de usuário */
-  .card {
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 10px 0;
-  }
-  
-  .card h3 {
-    margin-bottom: 5px;
-    font-size: 18px;
-  }
-  
-  .card p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  /* Estilo para centralizar o carregador de progresso */
+/* Estilo para a barra de navegação (Navbar) */
+/* Define o layout e as cores gerais da barra de navegação */
+nav {
+  background-color: #333; /* Define um fundo escuro para a barra de navegação */
+  color: white; /* Define a cor branca para o texto dentro da barra */
+  padding: 10px; /* Adiciona um espaçamento interno ao redor do conteúdo */
+  display: flex; /* Usa Flexbox para organizar os itens */
+  flex-direction: row; /* Alinha os itens em uma única linha horizontal */
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para os links dentro da Navbar */
+/* Define a aparência dos links de navegação */
+nav a {
+  color: white; /* Define a cor branca para o texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  margin: 5px 0; /* Adiciona espaçamento vertical entre os links */
+  padding: 5px 15px; /* Adiciona espaçamento interno ao redor do texto */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+  display: flex; /* Usa Flexbox para alinhar o conteúdo dentro dos links (ícone e texto) */
+}
+
+/* Estilo para os ícones dentro dos links */
+/* Adiciona espaçamento entre o ícone e o texto */
+nav a svg {
+  margin-right: 5px; /* Espaçamento de 5px entre o ícone e o texto */
+}
+
+/* Estilo para o efeito hover nos links */
+/* Define a aparência dos links ao passar o mouse */
+nav a:hover {
+  background-color: #555; /* Altera o fundo para cinza escuro ao passar o mouse */
+}
+
+/* Estilo para o link ativo na Navbar */
+/* Define o destaque visual para o link que está ativo */
+nav a.active-link {
+  background-color: #555; /* Fundo cinza para destacar o link ativo */
+  font-weight: bold; /* Deixa o texto em negrito para maior ênfase */
+  border-left: 5px solid #00bfff; /* Adiciona uma barra azul na lateral esquerda como indicação visual */
+}
+
+/* Estilo para cabeçalhos */
+/* Define espaçamento inferior consistente para títulos */
+h1, h2 {
+  margin-bottom: 20px; /* Adiciona um espaçamento de 20px abaixo dos cabeçalhos */
+}
+
+/* Estilo para botões */
+/* Define a aparência geral dos botões */
+button {
+  background-color: #007bff; /* Fundo azul claro */
+  color: white; /* Texto branco */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 15px; /* Adiciona espaçamento interno para um botão confortável */
+  border-radius: 5px; /* Bordas arredondadas para suavizar o design */
+  cursor: pointer; /* Mostra o cursor de clique ao passar o mouse */
+  font-size: 16px; /* Define o tamanho da fonte */
+  margin: 10px 0; /* Adiciona espaçamento vertical ao botão */
+}
+
+/* Efeito hover para botões */
+/* Define a aparência do botão ao passar o mouse */
+button:hover {
+  background-color: #0056b3; /* Fundo azul mais escuro para realce */
+}
+
+/* Estilo para o botão de navegação principal (home-button) */
+/* Define a aparência do botão utilizado para navegação principal */
+.home-button {
+  background-color: #007bff; /* Fundo azul claro */
+  color: white; /* Texto branco */
+  border: none; /* Remove bordas padrão */
+  padding: 10px 15px; /* Adiciona espaçamento interno para maior conforto */
+  border-radius: 5px; /* Bordas arredondadas para um design moderno */
+  cursor: pointer; /* Exibe o ponteiro de clique ao passar o mouse */
+  font-size: 16px; /* Define o tamanho do texto */
+  margin: 10px; /* Adiciona espaçamento ao redor do botão */
+}
+
+/* Efeito hover para o botão principal */
+/* Altera a aparência do botão ao passar o mouse */
+.home-button:hover {
+  background-color: #0056b3; /* Fundo azul mais escuro para destaque */
+}
+
+/* Estilo para alinhar elementos à direita */
+/* Utiliza Flexbox para posicionar elementos no lado direito */
+.align-right {
+  display: flex; /* Define um contêiner flexível */
+  justify-content: flex-end; /* Alinha o conteúdo ao final do eixo principal (direita) */
+}
+
+/* Estilo para formulários */
+/* Define a aparência geral de formulários */
+form {
+  background: white; /* Fundo branco para contraste */
+  padding: 20px; /* Adiciona espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve para destaque */
+  max-width: 400px; /* Define a largura máxima */
+  margin: 20px auto; /* Centraliza o formulário na página */
+}
+
+/* Estilo para contêineres dentro de formulários */
+/* Adiciona espaçamento inferior entre os campos */
+form div {
+  margin-bottom: 15px; /* Espaçamento inferior entre os elementos do formulário */
+}
+
+/* Estilo para rótulos de formulários */
+/* Define a aparência dos rótulos dos campos de formulário */
+label {
+  display: block; /* Faz com que o rótulo ocupe uma linha inteira */
+  margin-bottom: 5px; /* Adiciona espaçamento inferior ao rótulo */
+  font-weight: bold; /* Deixa o texto em negrito para maior destaque */
+}
+
+/* Estilo para campos de entrada de texto e email */
+/* Define a aparência padrão para os campos de formulário */
+input[type="text"], input[type="email"] {
+  width: 100%; /* O campo ocupa toda a largura disponível */
+  padding: 10px; /* Adiciona espaçamento interno para conforto ao digitar */
+  border: 1px solid #ccc; /* Define uma borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas para um visual moderno */
+}
+
+/* Estilo para o campo de texto longo (textarea) */
+/* Define a aparência do campo usado para entradas de múltiplas linhas */
+textarea {
+  width: 100%; /* O campo ocupa toda a largura disponível */
+  padding: 10px; /* Adiciona espaçamento interno */
+  border: 1px solid #ccc; /* Define uma borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-family: 'Arial', sans-serif; /* Garante que o texto use a mesma fonte do formulário */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+  resize: vertical; /* Permite redimensionar apenas na direção vertical */
+}
+
+/* Estilo para os cartões de usuário */
+/* Define a aparência dos cartões que exibem informações de cada usuário */
+.card {
+  background: white; /* Fundo branco para contraste com o fundo da página */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra leve para destaque */
+  padding: 15px; /* Adiciona espaçamento interno */
+  margin: 10px 0; /* Espaçamento vertical entre os cartões */
+}
+
+/* Estilo para os títulos dentro dos cartões */
+/* Define a aparência do título do cartão */
+.card h3 {
+  margin-bottom: 5px; /* Adiciona espaçamento inferior */
+  font-size: 18px; /* Define um tamanho de fonte maior para destaque */
+}
+
+/* Estilo para os parágrafos dentro dos cartões */
+/* Define a aparência dos textos descritivos nos cartões */
+.card p {
+  margin: 0; /* Remove margens padrão */
+  font-size: 14px; /* Define um tamanho de fonte menor */
+  color: #555; /* Define um tom de cinza médio para o texto */
+}
+
+/* Estilo para centralizar o carregador de progresso */
+/* Centraliza o indicador de carregamento visual na página */
 .loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+  display: flex; /* Usa Flexbox para alinhamento */
+  justify-content: center; /* Centraliza o carregador horizontalmente */
+  align-items: center; /* Centraliza o carregador verticalmente */
+  height: 200px; /* Define uma altura fixa para o contêiner */
 }
 
 /* Estilo para mensagens de erro */
+/* Define a aparência das mensagens exibidas em caso de erro */
 .error-message {
-  text-align: center;
-  color: red;
-  margin-top: 20px;
+  text-align: center; /* Centraliza o texto horizontalmente */
+  color: red; /* Define a cor vermelha para destacar o erro */
+  margin-top: 20px; /* Adiciona espaçamento superior */
 }
 
-/* Botão de tentativa novamente */
+/* Estilo para o botão de tentativa novamente */
+/* Define a aparência do botão utilizado para tentar novamente em caso de erro */
 .retry-button {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+  background-color: #dc3545; /* Fundo vermelho */
+  color: white; /* Texto branco */
+  border: none; /* Remove bordas padrão */
+  padding: 10px 15px; /* Adiciona espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas para suavizar o design */
+  cursor: pointer; /* Mostra o ponteiro de clique ao passar o mouse */
+  font-size: 16px; /* Define o tamanho do texto */
+  margin-top: 10px; /* Adiciona espaçamento superior */
 }
 
+/* Efeito hover para o botão de tentativa novamente */
+/* Altera a aparência do botão ao passar o mouse */
 .retry-button:hover {
-  background-color: #bd2130;
+  background-color: #bd2130; /* Fundo vermelho mais escuro para indicar interação */
 }
 
 /* Estilos para a lista de usuários */
+/* Define a aparência geral da lista que contém os usuários */
 .user-list {
-  list-style-type: none; /* Remove marcadores */
-  padding: 0; /* Remove padding padrão */
-  margin: 0; /* Remove margens padrão */
-  max-width: 1000px; /* Limita a largura da lista */
-  margin: 20px auto; /* Centraliza a lista */
-  border: 1px solid #ddd; /* Adiciona uma borda ao redor */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que os itens fiquem dentro do contêiner */
-  background-color: #ffffff; /* Fundo branco */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+  padding: 0; /* Remove o preenchimento interno padrão */
+  margin: 20px auto; /* Centraliza a lista na página com espaçamento vertical */
+  max-width: 1000px; /* Define a largura máxima da lista */
+  border: 1px solid #ddd; /* Adiciona uma borda cinza clara ao redor da lista */
+  border-radius: 8px; /* Bordas arredondadas para um visual moderno */
+  overflow: hidden; /* Garante que os itens não ultrapassem o contêiner */
+  background-color: #ffffff; /* Define o fundo branco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar destaque */
 }
 
 /* Estilos para cada item da lista */
+/* Define o layout e espaçamento dos itens individuais na lista */
 .user-list li {
-  padding: 15px 20px; /* Espaçamento interno */
-  border-bottom: 1px solid #eee; /* Linha separadora entre itens */
-  display: flex; /* Flexbox para alinhamento */
-  justify-content: space-between; /* Espaçamento entre nome e botão */
-  align-items: center; /* Centraliza verticalmente */
-  transition: background-color 0.2s; /* Transição suave no hover */
+  padding: 15px 20px; /* Adiciona espaçamento interno ao redor de cada item */
+  border-bottom: 1px solid #eee; /* Linha separadora entre os itens */
+  display: flex; /* Usa Flexbox para organizar os itens */
+  justify-content: space-between; /* Espaça o conteúdo dentro do item horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  transition: background-color 0.2s; /* Adiciona transição suave para mudança de cor no hover */
 }
 
 /* Último item sem borda inferior */
+/* Remove a linha inferior do último item para melhor estética */
 .user-list li:last-child {
   border-bottom: none;
 }
 
 /* Hover para itens */
+/* Altera a cor de fundo ao passar o mouse sobre os itens */
 .user-list li:hover {
-  background-color: #f7f7f7; /* Fundo claro ao passar o mouse */
+  background-color: #f7f7f7; /* Fundo claro para realce no hover */
 }
 
 /* Nome do usuário */
+/* Estilo para o nome do usuário exibido na lista */
 .user-list .user-name {
-  font-size: 16px; /* Tamanho da fonte maior */
-  font-weight: bold; /* Destaca o nome */
-  color: #333; /* Cor escura para contraste */
-  margin-bottom: 2px; /* Espaçamento pequeno abaixo do nome */
-  margin: 0;
+  font-size: 16px; /* Define um tamanho de fonte maior */
+  font-weight: bold; /* Destaca o nome com texto em negrito */
+  color: #333; /* Define uma cor escura para contraste */
+  margin: 0; /* Remove margens adicionais */
 }
 
-/* Email */
+/* Email do usuário */
+/* Define o estilo do email exibido */
 .user-list .user-email {
-  font-size: 14px; /* Tamanho menor para detalhes */
-  color: #666; /* Texto mais claro */
-  font-style: italic;
-  margin-top: -25px; /* Espaçamento interno */  
+  font-size: 14px; /* Define um tamanho de fonte menor */
+  color: #666; /* Define uma cor cinza mais clara */
+  font-style: italic; /* Adiciona estilo itálico ao texto */
+  margin-top: -25px; /* Ajusta o espaçamento para melhor alinhamento */
 }
 
+/* Descrição do usuário */
+/* Estilo para a descrição do usuário exibida */
 .user-description {
-  font-size: 14px; /* Tamanho menor para descrição */
-  color: #888; /* Texto em tom mais claro */
-  margin-top: -5px; /* Espaçamento superior para separação */  
+  font-size: 14px; /* Define um tamanho menor para o texto da descrição */
+  color: #888; /* Usa uma cor ainda mais clara para a descrição */
+  margin-top: -5px; /* Ajusta o espaçamento superior */
 }
 
 /* Botão dentro da lista */
+/* Estilo para os botões associados a cada item da lista */
 .user-list .action-button {
-  padding: 8px 12px; /* Espaçamento interno */
-  background-color: #007bff; /* Azul para destaque */
+  padding: 8px 12px; /* Define o espaçamento interno do botão */
+  background-color: #007bff; /* Fundo azul para destaque */
   color: white; /* Texto branco */
-  border: none; /* Remove borda padrão */
+  border: none; /* Remove bordas padrão */
   border-radius: 4px; /* Bordas arredondadas */
-  cursor: pointer; /* Mostra o ponteiro de clique */
-  font-size: 14px; /* Fonte ajustada */
-  transition: background-color 0.2s; /* Transição suave */
+  cursor: pointer; /* Exibe o ponteiro de clique ao passar o mouse */
+  font-size: 14px; /* Ajusta o tamanho do texto */
+  transition: background-color 0.2s; /* Adiciona transição suave para mudanças de cor */
 }
 
+/* Hover para o botão */
+/* Altera a aparência do botão ao passar o mouse */
 .user-list .action-button:hover {
-  background-color: #0056b3; /* Azul mais escuro no hover */
+  background-color: #0056b3; /* Azul mais escuro para indicar interação */
 }
-
