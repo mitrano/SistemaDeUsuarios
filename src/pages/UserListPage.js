@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 // Importa o componente de barra de navegação
 import Navbar from '../components/Navbar';
 // Importa o componente para exibir as informações do usuário
-import UserCard from '../components/UserCard';
-// Importa os dados dos usuários de um arquivo JSON
 import usersData from '../data/users.json';
 // Importa o botão de navegação para voltar à página anterior
 import NavigationButton from '../components/NavigationButton';
